@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      %%[ if not empty(@createLead) then ]%%
+         <p>%%=v(@createLead)=%% record created in Lead Object</p>
+      %%[ endif ]%%
+      <h2>Register</h2>
+      <form action="%%=RequestParameter('PAGEURL')=%%" method="post">
+         <label>First name</label>
+         <input type="text" name="firstname">
+         <label>Last name</label>
+         <input type="text" name="lastname">
+         <label>Company</label>
+         <input type="text" name="company">
+         <label>Email</label>
+         <input type="text" name="email">
+         <input name="submitted" type="hidden" value="true" />
+         <input type="submit" value="Submit">
+      </form>
+   </body>
+</html>
