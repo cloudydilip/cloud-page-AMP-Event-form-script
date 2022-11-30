@@ -1,0 +1,16 @@
+%%[
+
+if RequestParameter("submitted") == true then
+
+  var @createLead
+  set @createLead = CreateSalesforceObject(
+        "Lead", 4,
+        "FirstName", RequestParameter("firstname"),
+        "LastName", RequestParameter("lastname"),
+        "Company", RequestParameter("company"),
+        "Email", RequestParameter("email")
+       )
+
+endif
+
+]%%
